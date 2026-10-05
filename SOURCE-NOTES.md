@@ -6,7 +6,7 @@
 
 ## What this package adds
 
-The requester supplied the core `SKILL.md` (identity, phases 1–6, output format, hard rules, extended modes, internal quality test). This package preserves that content verbatim and adds, as original supporting material:
+The requester supplied the core `SKILL.md` (identity, phases 1–6, output format, hard rules, extended modes, internal quality test). This package preserves that content faithfully (translated to English) and adds, as original supporting material:
 
 - `references/` — six deep-dive guides that operationalize the engine (one file per major sub-system), each with worked examples and guardrails.
 - `templates/` — three reusable working sheets.
