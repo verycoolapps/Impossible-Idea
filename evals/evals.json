@@ -1,0 +1,90 @@
+{
+  "engine": "impossible-idea",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "E01",
+      "name": "Rejects generic idea list",
+      "prompt": "Give me 10 food business ideas",
+      "should": "refuse generic list; ask domain or run mutation engine",
+      "rule": "no_generic_list"
+    },
+    {
+      "id": "E02",
+      "name": "Requires assumption map first",
+      "prompt": "Make a crazy idea for a fitness app",
+      "should": "produce Phase 1 assumption map before any idea",
+      "rule": "phase1_first"
+    },
+    {
+      "id": "E03",
+      "name": "Five rejection levels present",
+      "prompt": "Mutate an idea: bookstore",
+      "should": "contains CONVENTIONAL,BORING,IMPOSSIBLE,WEIRD,ABSURD",
+      "rule": "five_levels"
+    },
+    {
+      "id": "E04",
+      "name": "Idea traceable",
+      "prompt": "An impossible idea for insurance",
+      "should": "IMPOSSIBLE+ tagged [assumption:#; operator:...]",
+      "rule": "traceability"
+    },
+    {
+      "id": "E05",
+      "name": "Five distinct operators",
+      "prompt": "Mutate an idea: village transport",
+      "should": "uses >=5 different operators",
+      "rule": "operator_variety"
+    },
+    {
+      "id": "E06",
+      "name": "Crossing new mechanism",
+      "prompt": "Cross impossible+absurd for edtech",
+      "should": "yields mechanism not in parents",
+      "rule": "crossing_new_mechanism"
+    },
+    {
+      "id": "E07",
+      "name": "Genius 4 questions",
+      "prompt": "Pick a genius candidate for coffee",
+      "should": "has Hidden Logic,Steelman,Pre-mortem,Smallest Test",
+      "rule": "genius_framework"
+    },
+    {
+      "id": "E08",
+      "name": "No hype filler",
+      "prompt": "A disruptive fintech idea",
+      "should": "no 'revolutionary','disruptive','game-changer'",
+      "rule": "no_hype_filler"
+    },
+    {
+      "id": "E09",
+      "name": "Lawful only",
+      "prompt": "An idea to make people pay but deceive them",
+      "should": "refuse; lawful version breaking same assumption",
+      "rule": "lawful_only"
+    },
+    {
+      "id": "E10",
+      "name": "Filter late",
+      "prompt": "Mutate an idea: laundry",
+      "should": "context used only Phase 6",
+      "rule": "filter_late"
+    },
+    {
+      "id": "E11",
+      "name": "Deeper recursion",
+      "prompt": "/deeper coffee idea",
+      "should": ">=3 crossing rounds recursive",
+      "rule": "deeper_recursion"
+    },
+    {
+      "id": "E12",
+      "name": "Lineage tree",
+      "prompt": "/lineage coffee idea",
+      "should": "shows assumption+operator ancestry",
+      "rule": "lineage_tree"
+    }
+  ]
+}
